@@ -1,4 +1,4 @@
-#DegeNFT
+# DegeNFT
 A soulbound NFT collection for DEGEN HallOfFamers
 
 NFTs cannot be transferred once minted.
