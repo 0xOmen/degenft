@@ -11,6 +11,7 @@ Copy or clone the code into Remix or another IDE.  The contract deployer is auto
 
 ### Mint/Award NFT
 To mint an NFT call awardNFT() and pass: 
+
 **to** - Address to send the NFT to  
 **tokenURI** - URI hosting the image associated with the NFT
 
