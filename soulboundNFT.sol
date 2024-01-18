@@ -13,16 +13,16 @@ contract SoulBoundToken is ERC721URIStorage, Ownable {
 
     constructor() ERC721("SoulBoundDegen", "DEGENFT") Ownable(msg.sender) {}
 
-    function awardNFT(address player, string memory tokenURI)
+    function awardNFT(address to, string memory tokenURI)
         public onlyOwner
         returns  (uint256)
     {
-        uint256 newItemId = _tokenIdCounter.current();
-        _mint(player, newItemId);
-        _setTokenURI(newItemId, tokenURI);
+        uint256 newNFTId = _tokenIdCounter.current();
+        _mint(to, newNFTId);
+        _setTokenURI(newNFTId, tokenURI);
 
         _tokenIdCounter.increment();
-        return newItemId;
+        return newNFTId;
     }
 
     function transferFrom(address from, address to, uint256) override(ERC721, IERC721) pure public {
